@@ -1,0 +1,29 @@
+{
+  "name": "untitled5",
+  "version": "1.0.0",
+  "description": "An API That provides weather information to StylForecast WebSite",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "npx nodemon app.js",
+    "build": "node app.js"
+  },
+  "keywords": [
+    "JavaScript",
+    "Node JS",
+    "Express JS"
+  ],
+  "author": "Konstantinos Stylianou",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.5",
+    "express": "^4.18.3",
+    "helmet": "^7.1.0",
+    "morgan": "^1.10.0",
+    "mysql2": "^3.9.3",
+    "node-cron": "^3.0.3",
+    "nodemon": "^3.1.0"
+  }
+}
