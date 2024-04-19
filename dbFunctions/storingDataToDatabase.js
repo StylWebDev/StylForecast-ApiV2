@@ -127,5 +127,5 @@ export const deleteHistoricalData = async (city) => {
         //Promise's response in case of failure
         return {Error: error}
     }
-}
+};
 

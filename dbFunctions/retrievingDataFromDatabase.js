@@ -155,4 +155,4 @@ export const getProvidersDailyWeatherData = async (city) => {
         return err.sqlMessage;
     }
 
-}
+};
