@@ -1,4 +1,4 @@
-# ![StylForecastApi_icon](https://api.iconify.design/mdi:server-security.svg?color=%23d96363&width=35) StylForecastAPI V2.0.0:
+# ![StylForecastApi_icon](https://api.iconify.design/mdi:server-security.svg?color=%23d96363&width=35) StylForecastAPI V2.1.1:
 
 A web service Which provides weather information to the StylForecast Website
 
