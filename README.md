@@ -2,7 +2,7 @@
 
 ##### A web service which provides all necessary data to the StylForecast Website
 
-## What information StylForecast Provides? :
+## What information StylForecast API Provides? :
 
 - ### Weather Data
   - [x] Weather Forecast for 42 greek cities.
