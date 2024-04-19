@@ -82,12 +82,23 @@ export const storeToProvidersTable = async ( visualCrossingData, openWeatherArra
                 }
             }
         })
-        const pId = [`VisualCrossing`,`OpenMeteo`]
+        const providersName = [`VisualCrossing`,`OpenMeteo`]
 
-        //Inserting weekly&daily weather data given by the providers, if there is no data located on the database's table for the specified city
-        for (let step=0; step<pId.length; step++) {
-            for (let day = 0; day < visualCrossingData.length; day++) {
-                await pool.query(`INSERT INTO providersHistoricalWeatherData (providersName, dateWeather, cityName, data, day) VALUES (? ,? , ? , ? , ?)`, [ pId[step] , visualCrossingData[day].datetime, city.toUpperCase(), JSON.stringify((step===0) ? visualCrossingData[day] : openWeatherData[day]), day]);
+        const [check] = await pool.query(`select count(day) as total FROM providersWeatherForecast WHERE cityName = ?`, [city.toUpperCase()]);
+        if (check[0].total === 0) {
+            //Inserting weekly&daily weather data given by the providers, if there is no data located on the database's table for the specified city
+            for (let step=0; step<providersName.length; step++) {
+                for (let day = 0; day < visualCrossingData.length; day++) {
+                    await pool.query(`INSERT INTO providersWeatherForecast (providersName, dateWeather, cityName, data, day) VALUES (? ,? , ? , ? , ?)`, [providersName[step], visualCrossingData[day].datetime, city.toUpperCase(), JSON.stringify((step === 0) ? visualCrossingData[day] : openWeatherData[day]), day]);
+                }
+            }
+        }
+        else{
+            //Updating weekly&daily weather data given by the providers, if there is no data located on the database's table for the specified city
+            for (let step=0; step<providersName.length; step++) {
+                for (let day = 0; day < visualCrossingData.length; day++) {
+                    await pool.query(`UPDATE providersWeatherForecast SET dateWeather = ?, data = ? WHERE cityName = ? AND day = ? AND providersName = ?`, [visualCrossingData[day].datetime, JSON.stringify((step === 0) ? visualCrossingData[day] : openWeatherData[day]), city.toUpperCase(), day, providersName[step]]);
+                }
             }
         }
 

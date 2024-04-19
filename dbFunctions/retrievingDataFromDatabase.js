@@ -83,7 +83,7 @@ export const getHistoricalWeatherData = async (city, date) => {
         //Selecting information about the location from the Database
         const [location] = await pool.query(`SELECT latitude,longitude,resolvedAddress FROM cityList WHERE cityName = ?`, [city.toUpperCase()]);
         //Selecting Historical Weather Data from the Database
-        const [historicalWeather] = await pool.query(`SELECT dateWeather,data FROM historicalWeatherData weatherForecast WHERE cityName = ? && dateWeather = ? ORDER BY day`, [city.toUpperCase(), date]);
+        const [historicalWeather] = await pool.query(`SELECT dateWeather,data FROM historicalWeatherData weatherForecast WHERE cityName = ? && dateWeather = ?`, [city.toUpperCase(), date]);
 
         //Promises response in case of success
         return {
@@ -106,7 +106,7 @@ export const getProvidersHistoricalWeatherData = async (city, date, provider) =>
         //Selecting information about the location from the Database
         const [location] = await pool.query(`SELECT latitude,longitude,resolvedAddress FROM cityList WHERE cityName = ?`, [city.toUpperCase()]);
         //Selecting Provider's Historical Weather Data from the Database
-        const [historicalWeather] = await pool.query(`SELECT providersName,data FROM providersHistoricalWeatherData weatherForecast WHERE cityName = ? && dateWeather = ? && providersName = ? ORDER BY day`, [city.toUpperCase(), date, provider]);
+        const [historicalWeather] = await pool.query(`SELECT providersName,data FROM providersHistoricalWeatherData WHERE cityName = ? && dateWeather = ? && providersName = ?`, [city.toUpperCase(), date, provider]);
 
         //Promises response in case of success
         return {
@@ -131,9 +131,9 @@ export const getProvidersDailyWeatherData = async (city) => {
         //Selecting information about the location from the Database
         const [location] = await pool.query(`SELECT latitude,longitude,resolvedAddress FROM cityList WHERE cityName = ?`, [city.toUpperCase()]);
         //Selecting visualCrossing's Weekly Weather Forecast from the Database
-        const [visualCrossing] = await pool.query(`SELECT providersName,data FROM providersHistoricalWeatherData weatherForecast WHERE cityName = ? && providersName = ? ORDER BY statusID DESC LIMIT 5`, [city.toUpperCase(), `VisualCrossing`]);
+        const [visualCrossing] = await pool.query(`SELECT providersName,data FROM providersWeatherForecast weatherForecast WHERE cityName = ? && providersName = ? `, [city.toUpperCase(), `VisualCrossing`]);
         //Selecting OpenWeather's Weekly Weather Forecast from the Database
-        const [openWeather] = await pool.query(`SELECT providersName,data FROM providersHistoricalWeatherData weatherForecast WHERE cityName = ? && providersName = ? ORDER BY statusID DESC LIMIT 5`, [city.toUpperCase(), `OpenMeteo`]);
+        const [openWeather] = await pool.query(`SELECT providersName,data FROM providersWeatherForecast weatherForecast WHERE cityName = ? && providersName = ?`, [city.toUpperCase(), `OpenMeteo`]);
 
 
         //Promises response in case of success

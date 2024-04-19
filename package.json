@@ -1,6 +1,6 @@
 {
   "name": "untitled5",
-  "version": "2.0.1",
+  "version": "2.1.1",
   "description": "An API That provides weather information to StylForecast WebSite",
   "main": "index.js",
   "type": "module",

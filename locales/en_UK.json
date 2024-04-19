@@ -1,0 +1,118 @@
+{
+  "nav": {
+    "brandName": "stylForecast",
+    "link1": "Home",
+    "link2": "Contact",
+    "link3": "About",
+    "menu": "Menu",
+    "language": "Language",
+    "locale1": "English",
+    "theme": "Change Theme"
+  },
+  "home": {
+    "title": "StylForecast",
+    "slogan": "Your Daily Style, Tailored by Tomorrow's Forecast!",
+    "purpose": "Find the latest weather forecast for your area",
+    "search": "Type your area"
+  },
+  "about": {
+    "title": "About",
+    "purposes1": "This site was created for practice and academic purposes only!",
+    "purposes2": "StylForecast provide users with real-time weather information, forecasts, and other weather-related data.",
+    "purposes3": "StylForecast information is based on Visual Crossing Weather API",
+    "purposes4": "StylForecast Predictions are 80% accurate"
+  },
+  "contact": {
+    "title": "Contact Information",
+    "name": "Name",
+    "email": "Email",
+    "issue": "Issue",
+    "submit": "Submit"
+  },
+  "forecastDetails": {
+    "feels": "Feels",
+    "max": "Max",
+    "min": "Min",
+    "pollen": "Pollen",
+    "pressure": "Pressure",
+    "dust": "Dust",
+    "sunset": "Sunset",
+    "uv": "UV Index",
+    "sunrise": "Sunrise",
+    "wind": "Wind",
+    "cloudy": "Cloudy",
+    "rain": "Rain",
+    "fog": "Fog",
+    "humidity": "Humidity",
+    "gust": "Gust",
+    "snow": "Snow",
+    "live": "Weather Live",
+    "charts": "Weather Charts",
+    "chance": "Chance",
+    "like": "Like",
+    "concise": "Concise Weather Forecast"
+  },
+  "days": {
+    "day0": "Sunday",
+    "day1": "Monday",
+    "day2": "Tuesday",
+    "day3": "Wednesday",
+    "day4": "Thursday",
+    "day5": "Friday",
+    "day6": "Saturday"
+  },
+  "daily": {
+    "details": "View Details",
+    "search": "Type your area",
+    "compare": "Compare Our Daily Forecast With",
+    "now": "Today's Weather"
+  },
+  "charts": {
+    "temp": "Temperature in °C",
+    "uv": "UV Index",
+    "wind": "Wind Speeds in Km",
+    "rain": "Rain/Snow chance"
+  },
+  "conditions": {
+    "Partially cloudy": "Partially Cloudy",
+    "Overcast": "Overcast",
+    "Clear": "Clear",
+    "Rain, Overcast": "Rain, Overcast",
+    "Rain, Partially cloudy": "Rain, Partially Cloudy",
+    "Thunder": "Thunder",
+    "Thunder, Overcast": "Thunder",
+    "Thunder, Partially cloudy": "Thunder, Partially Cloudy",
+    "Hail, Overcast": "Hail",
+    "Foggy": "Foggy",
+    "Hail, Partially cloudy": "Hail, Partially Cloudy",
+    "Snow, Rain, Partially cloudy": "Sleet",
+    "Snow, Rain, Overcast": "Sleet",
+    "Snow, Partially cloudy": "Snow, Partially Cloudy",
+    "Snow, Overcast": "Snow, Overcast",
+    "Snow, Rain": "Sleet",
+    "Rain": "Rain",
+    "Snow": "Snow"
+  },
+  "footer": {
+    "rights": "All rights reserved ",
+    "find": "Find me on"
+  },
+  "areaNotFound": {
+    "title": "Area Not Found!",
+    "err": "Sorry, But We Couldn't Find The Area You Were Looking For.",
+    "back": "Back to home"
+  },
+  "notFound": {
+    "title": "Page Not Found!",
+    "err": "Sorry, But We Couldn't Find The Page You Were Looking For.",
+    "back": "Back to home"
+  },
+  "time": {
+    "am": "AM",
+    "pm": "PM"
+  },
+  "map": {
+    "temp": "Temperatures Map",
+    "precip": "Precipitation Map"
+  }
+}
