@@ -11,7 +11,7 @@ export const storeWeatherData = async (city,type=0) => {
     try {
 
         //Fetching From VisualCrossing & declaring visualCrossingData in order to store the response data
-        const visualCrossing = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?unitGroup=metric&include=days%2Ccurrent%2Chours&key=${process.env.VISUAL_CROSSING_API_KEY_HOURLY}&contentType=json`)
+        const visualCrossing = await fetch(`https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${city}?unitGroup=metric&include=days%2Ccurrent%2Calerts%2Chours&key=${process.env.VISUAL_CROSSING_API_KEY_HOURLY}&contentType=json`)
         const visualCrossingData = await visualCrossing.json();
 
         //Fetching From OpenMeteo & declaring openWeatherData in order to store the response data
@@ -76,7 +76,8 @@ export const storeWeatherData = async (city,type=0) => {
                         icon: hours_value.icon, //Weather Icon for each hour
                         conditions: hours_value.conditions, //Weather Conditions for each hour
                     };
-                })
+                }),
+                alerts: visualCrossingData.alerts
             }
         });
 
