@@ -17,10 +17,26 @@
   },
   "about": {
     "title": "About",
-    "purposes1": "This site was created for practice and academic purposes only!",
-    "purposes2": "StylForecast provide users with real-time weather information, forecasts, and other weather-related data.",
-    "purposes3": "StylForecast information is based on Visual Crossing Weather API",
-    "purposes4": "StylForecast Predictions are 80% accurate"
+    "features": "features",
+    "desc": "StylForecast provide users with real-time weather data, Daily and Weekly Forecast, Historical Weather data, and other weather-related data.",
+    "purposes1": "StylForecast Predictions are 80% accurate",
+    "purposes2": "Current Weather Conditions",
+    "purposes3": "Weather Forecast for all cities around the world.",
+    "purposes4": "Satellite & Temperature Maps",
+    "purposes5": "Weekly and 3-hour daily weather forecast",
+    "purposes6": "Updated weather forecast and alerts every 3 hours",
+    "purposes7": "Precipitation, Temperature And UV Charts",
+    "purposes8": "Information about each city",
+    "purposes9": "Historical Weather Data",
+    "label1": "Accuracy",
+    "label2": "Real-Time",
+    "label3": "Global",
+    "label4": "Weather Maps",
+    "label5": "24h Service",
+    "label6": "99.9% Uptime Service",
+    "label7": "Statistics",
+    "label8": "City Info",
+    "label9": "Historical Data"
   },
   "contact": {
     "title": "Contact Information",
@@ -94,8 +110,8 @@
     "Snow": "Snow"
   },
   "footer": {
-    "rights": "All rights reserved ",
-    "find": "Find me on"
+    "rights": "Constantine Stylianou",
+    "find": "Find me"
   },
   "areaNotFound": {
     "title": "Area Not Found!",
