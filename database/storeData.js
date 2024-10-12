@@ -1,9 +1,10 @@
-import {pool} from "../db/configuration.js"; //importing dotenv library
-import {toGreeklish} from "./grToEn.js";
+import pool from './connection.js' // importing pool connection
+import toGreeklish from '../utils/grToEn.js'
 
 export const storeToWeatherTable = async (weatherData, city) => {
     //Translating greek to english
     city = toGreeklish(city);
+
     try {
         //Checking if there's no data for a specific city on the database's table
         const [check] = await pool.query(`select count(day) as total FROM weatherForecast WHERE cityName = ?`, [city.toUpperCase()]);
@@ -33,6 +34,7 @@ export const storeToWeatherTable = async (weatherData, city) => {
 export const storeToCurrentTable = async (currentWeatherData, city) => {
     //Translating greek to english
     city = toGreeklish(city);
+    console.log(city);
     try {
         //Checking if there's no data for a specific city on the database's table
         const [check] = await pool.query(`select count(cityName) as total FROM currentConditions WHERE cityName = ?`, [city.toUpperCase()]);

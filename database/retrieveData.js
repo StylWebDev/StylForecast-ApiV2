@@ -1,5 +1,4 @@
-import {pool} from "../db/configuration.js";
-import {toGreeklish} from "./grToEn.js";
+import pool from "./connection.js";// importing pool connection
 
 //Retrieving Current Weather Forecast from the Database
 //Implementing an asynchronous function in order to retrieve data from database
@@ -100,8 +99,7 @@ export const getHistoricalWeatherData = async (city, date) => {
 }
 
 //Retrieving Provider's Historical Weather Data from the Database
-//Implementing an asynchronous function in order to retrieve data from database
-export const getProvidersHistoricalWeatherData = async (city, date, provider) => {
+export const  getProvidersHistoricalWeatherData = async (city, date, provider) => {
     try {
         //Selecting information about the location from the Database
         const [location] = await pool.query(`SELECT latitude,longitude,resolvedAddress FROM cityList WHERE cityName = ?`, [city.toUpperCase()]);

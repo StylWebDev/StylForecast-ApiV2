@@ -121,7 +121,7 @@ const replaceText = (text, characterMap, exactMatch, ignore, regExOptions = 'g')
     return text;
 }
 
-export const toGreeklish = (text, ignore) => {
+export default (text, ignore) => {
     return replaceText(text, greekToGreeklishMap, true, ignore);
 }
 

@@ -3,7 +3,7 @@ import dotenv from 'dotenv'
 dotenv.config();
 
 //Creating a connection pool in order to connect with the mySQL Database
-export const pool = createPool({
+export default createPool({
     host: process.env.DB_HOST,
     user: process.env.DB_USER,
     password: process.env.DB_PASS,

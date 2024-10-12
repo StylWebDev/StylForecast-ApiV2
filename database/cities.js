@@ -1,10 +1,9 @@
-import {pool} from "../db/configuration.js";
-import dotenv from "dotenv"; //importing dotenv library
+import pool from './connection.js' // importing pool connection
+import dotenv from 'dotenv'; //importing dotenv library
 dotenv.config(); // Accessing environment variables
 
-
 //Defining an Array named cityList, which contains a list of the cities that we will provide our weather preictions
-export const cityList = [
+export default [
     'Athens',
     "Agios Nikolaos",
     "Agrinio",

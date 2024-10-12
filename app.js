@@ -6,8 +6,8 @@ import morgan from 'morgan'; //Importing morgan dependency
 import { dirname } from 'node:path'; //Importing directory name from node path
 import { fileURLToPath } from 'node:url'; //Importing directory name from node url
 import * as path from "path"; // Import path from node path
-import router from "./router/weather.js";
-import transRouter from "./router/translations.js";
+import weatherRouter from "./routes/weather.js";
+import translationRouter from "./routes/translations.js";
 
 import * as Job from "./jobs/weather.job.js"
 
@@ -21,8 +21,8 @@ app.use(cors()); //help me to manage and control any cross-origin requests
 app.use(morgan("combined")); //A tool which logs successes and errors
 app.use(helmet()); //Secures HTTP response headers
 app.disable("x-powered-by"); //Hiding express Server information
-app.use("/", router);
-app.use("/",transRouter);
+app.use("/", weatherRouter);
+app.use("/",translationRouter);
 
 Job.currentWeatherJob();
 Job.storeWeatherDataJob();
